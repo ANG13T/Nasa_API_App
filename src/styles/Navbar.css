@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
+
+.navbar{
+    width: 100%;
+    background-color: black;
+  }
+
+  li{
+      width: 10rem;
+      text-align: center;
+      font-size: 2rem;
+  }
+
+  #logo{
+      width: 8rem;
+      height: 4rem; 
+  }
+
+#myNav{
+    font-family: 'Public Sans';
+}
+
+  
