@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
+import '../styles/Home.css';
 
 class Home extends React.Component {
     state = {
@@ -22,14 +23,20 @@ class Home extends React.Component {
         const {posts} = this.state
         const postList = posts.length ? (
             posts.map(post => {
+                var year = post.date.slice(0,4)
+                var month = post.date.slice(5,7)
+                var date = post.date.slice(8,10)
+                var image = "https://epic.gsfc.nasa.gov/archive/natural/" + year + "/" + month + "/" + date + "/png/" + post.image + ".png";
+     
                 return(
                     <div className="post card" key={post.identifier}>
                         <div className="card-content">
                             <Link to={'/' + post.identifier}>
                             
                             </Link>
-                            <span className="card-title">{post.caption}</span>
-                            <img className="materialboxed" width="650" src={post.image} />
+                            <span className="card-title">{"Latitude: " + post.centroid_coordinates.lat}</span>
+                            <span className="card-title">{"Longitude: " + post.centroid_coordinates.lon}</span>
+                            <img className="materialboxed image" src={image} />
                             <p>{post.earth_date}</p>
                         </div>
                     </div>
@@ -40,7 +47,6 @@ class Home extends React.Component {
         )
         return(
             <div className="container">
-            <h4 className="center">Home</h4>
             {postList}
         </div>
         )

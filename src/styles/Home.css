@@ -1,0 +1,24 @@
+.image{
+    width: 20rem;
+    height: 20rem;
+    margin:auto;
+    margin-top: 3rem;
+}
+
+.card{
+    width: 28rem;
+    height: 35rem;
+    
+}
+
+.card-title{
+    text-align:center;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
