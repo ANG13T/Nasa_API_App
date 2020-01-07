@@ -30,15 +30,14 @@ class Home extends React.Component {
      
                 return(
                     <div className="post card" key={post.identifier}>
+                    <Link to={'/' + post.identifier}>
                         <div className="card-content">
-                            <Link to={'/' + post.identifier}>
-                            
-                            </Link>
                             <span className="card-title">{"Latitude: " + post.centroid_coordinates.lat}</span>
                             <span className="card-title">{"Longitude: " + post.centroid_coordinates.lon}</span>
                             <img className="materialboxed image" src={image} />
                             <p>{post.earth_date}</p>
                         </div>
+                    </Link>
                     </div>
                 )
             })

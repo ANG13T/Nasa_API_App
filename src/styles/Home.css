@@ -8,6 +8,10 @@
     border-radius: 10rem;
 }
 
+.card-title{
+    color:white;
+}
+
 .card{
     width: 27rem;
     height: 33rem;
