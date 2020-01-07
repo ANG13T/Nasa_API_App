@@ -46,7 +46,7 @@ class Home extends React.Component {
            console.log("Data could not be found")
         )
         return(
-            <div className="container">
+            <div className="section">
             {postList}
         </div>
         )

@@ -1,24 +1,38 @@
+
+
 .image{
     width: 20rem;
     height: 20rem;
     margin:auto;
     margin-top: 3rem;
+    border-radius: 10rem;
 }
 
 .card{
-    width: 28rem;
-    height: 35rem;
-    
+    width: 27rem;
+    height: 33rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    font-family: 'Roboto Mono';
+    background-color: rgba(177, 177, 177, 0.5);
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(63, 112, 218, 0.815);
 }
 
 .card-title{
     text-align:center;
 }
 
-.container{
+.section{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    margin: 0;
+    margin-top: 3rem;
 }
+

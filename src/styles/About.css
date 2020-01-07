@@ -1,0 +1,17 @@
+h3{
+    color: white;
+    font-family: 'Roboto Mono';
+    text-align: center;
+}
+
+.text-container{
+    color:white;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}

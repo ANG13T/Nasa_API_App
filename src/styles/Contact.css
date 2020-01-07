@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+h3{
+    color: white;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    font-size: 4rem;
+}
+
+.text-container{
+    color:white;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
