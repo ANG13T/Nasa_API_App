@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import '../styles/Post.css';
 
 class Post extends React.Component {
     state = {
@@ -21,6 +22,7 @@ class Post extends React.Component {
                     var date = this.state.post.date.slice(8,10)
                     var image = "https://epic.gsfc.nasa.gov/archive/natural/" + year + "/" + month + "/" + date + "/png/" + this.state.post.image + ".png";
                     this.setState({image: image})
+                    console.log(indivData)
                 } else{
                     console.log("Nope")
                 }
@@ -35,8 +37,33 @@ class Post extends React.Component {
                 
      
             <div className="post">
-                <h4 className="center">{this.state.post.identifier}</h4>
-                <img src={this.state.image} alt="Earth Image"/>
+                <img src={this.state.image} alt="Earth Image" id="landscape-image"/>
+                <div className="container posts-container">
+                    <ul>
+                        <h3 className="title">Date:</h3>
+                        <li>{this.state.post.date.slice(0,10)}</li>
+                        <h3 className="title">Geographical Coordinates:</h3>
+                        <li>Lat: {this.state.post.centroid_coordinates.lat}</li>
+                        <li>Long: {this.state.post.centroid_coordinates.lon}</li>
+                        <h3 className="title">Position of the satellite:</h3>
+                        <li>X: {this.state.post.dscovr_j2000_position.x}</li>
+                        <li>Y: {this.state.post.dscovr_j2000_position.y}</li>
+                        <li>Z: {this.state.post.dscovr_j2000_position.z}</li>
+                        <h3 className="title">Position of Moon:</h3>
+                        <li>X: {this.state.post.lunar_j2000_position.x}</li>
+                        <li>Y: {this.state.post.lunar_j2000_position.y}</li>
+                        <li>Z: {this.state.post.lunar_j2000_position.z}</li>
+                        <h3 className="title">Position of Sun:</h3>
+                        <li>X: {this.state.post.sun_j2000_position.x}</li>
+                        <li>Y: {this.state.post.sun_j2000_position.y}</li>
+                        <li>Z: {this.state.post.sun_j2000_position.z}</li>
+                        <h3 className="title">Satellite Attitude:</h3>
+                        <li>Q0: {this.state.post.attitude_quaternions.q0}</li>
+                        <li>Q1: {this.state.post.attitude_quaternions.q1}</li>
+                        <li>Q2: {this.state.post.attitude_quaternions.q2}</li>
+                        <li>Q3: {this.state.post.attitude_quaternions.q3}</li>
+                    </ul>
+                </div>
             </div>
         ) : (
             <div className="center">Loading Post</div>

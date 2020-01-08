@@ -1,0 +1,28 @@
+#landscape-image{
+    width: 65%;
+    height: 100vh;
+    margin:none;
+}
+
+.post{
+    display: flex;
+    flex-direction: row;
+}
+
+.posts-container{
+    display: flex;
+    flex-direction: column;
+    font-family:'Roboto Mono';
+    background-color: black;
+}
+
+.title{
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+li{
+    font-size: 0.8rem;
+    color:white;
+}
+

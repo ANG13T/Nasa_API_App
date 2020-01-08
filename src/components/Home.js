@@ -34,7 +34,7 @@ class Home extends React.Component {
                         <div className="card-content">
                             <span className="card-title">{"Latitude: " + post.centroid_coordinates.lat}</span>
                             <span className="card-title">{"Longitude: " + post.centroid_coordinates.lon}</span>
-                            <img className="materialboxed image" src={image} />
+                            <img className="materialboxed image earth-image" src={image} />
                             <p>{post.earth_date}</p>
                         </div>
                     </Link>
